@@ -1,0 +1,31 @@
+Kemongmo
+API server: https://next.kemongmo.com
+API Specs: https://next.kemongmo.com/openapi.json
+Key auth: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE
+
+Evomaster:
+cd /result
+mkdir Evomaster
+cd Evomaster
+evomaster --problemType REST --blackBox true --outputFormat JAVA_JUNIT_5 --maxTime 1h --ratePerMinute 60 --outputFolder /home/result/Evomaster --header0 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE" --bbTargetUrl "https://next.kemongmo.com" --bbSwaggerUrl https://next.kemongmo.com/openapi.json > log.txt
+
+Schemathesis:
+cd /result
+mkdir Schemathesis
+cd Schemathesis
+st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE" --base-url "https://next.kemongmo.com" https://next.kemongmo.com/openapi.json > log.txt
+st replay all.yaml --status=FAILURE > fail.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/auth/token" > uri_auth_token.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/auth/me" > uri_auth_me.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users" > uri_users.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users/update_info" > uri__users_update_info.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users/update_nickname" > uri_users_update_nickname.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users/update_avatar" > uri_users_update_avatar.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users/update_birthday" > uri_users_update_birthday.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/users/update_password" > uri_users_update_password.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/records/my_records" > uri_records_my_records.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/records/upload" > uri_records_upload.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/ranking/day" > uri_ranking_day.txt
+st replay all.yaml --uri="https://next.kemongmo.com/v1/notification" > uri_notification.txt
+
+Restler:

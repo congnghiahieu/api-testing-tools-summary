@@ -1,0 +1,8 @@
+Replaying cassette: all.yaml
+Total interactions: 1897
+
+  ID              : 1
+  URI             : https://next.kemongmo.com/v1/auth/me
+  Old status code : 200
+  New status code : 200
+
