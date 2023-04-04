@@ -1,0 +1,32 @@
+{
+    "final_spec_coverage": "6 / 6",
+    "rendered_requests": "6 / 6",
+    "rendered_requests_valid_status": "6 / 6",
+    "num_fully_valid": 6,
+    "num_sequence_failures": 0,
+    "num_invalid_by_failed_resource_creations": 0,
+    "total_object_creations": 191,
+    "total_requests_sent": {
+        "gc": 98,
+        "main_driver": 10,
+        "LeakageRuleChecker": 0,
+        "ResourceHierarchyChecker": 0,
+        "UseAfterFreeChecker": 2,
+        "InvalidDynamicObjectChecker": 48,
+        "PayloadBodyChecker": 140,
+        "ExamplesChecker": 0,
+        "InvalidValueChecker": 1
+    },
+    "bug_buckets": {
+        "InvalidDynamicObjectChecker_20x": 2,
+        "InvalidValueChecker_500": 1,
+        "PayloadBodyChecker_500": 2,
+        "UseAfterFreeChecker_20x": 1
+    },
+    "reproducible_bug_buckets": {
+        "InvalidDynamicObjectChecker_20x": 0,
+        "InvalidValueChecker_500": 0,
+        "PayloadBodyChecker_500": 0,
+        "UseAfterFreeChecker_20x": 0
+    }
+}

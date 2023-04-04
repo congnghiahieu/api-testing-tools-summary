@@ -1,0 +1,105 @@
+======================= Schemathesis test session starts =======================
+platform Linux -- Python 3.10.6, schemathesis-3.18.5, hypothesis-6.68.2, hypothesis_jsonschema-0.22.1, jsonschema-4.17.3
+rootdir: /home/schemathesis
+Hypothesis: deadline=timedelta(milliseconds=15000), database=DirectoryBasedExampleDatabase('/home/schemathesis/.hypothesis/examples')
+Schema location: https://raw.githubusercontent.com/congnghiahieu/docker-ers/master/demospec.json
+Base URL: https://restlerdemoserver.pagekite.me
+Specification version: Open API 3.0.2
+Workers: 8
+Collected API operations: 6
+
+.FFFFF
+
+=================================== FAILURES ===================================
+_________________________ PUT /api/blog/posts/{postId} _________________________
+1. Received a response with a status code, which is not defined in the schema: 404
+
+Declared status codes: 204, 422
+
+Response status: 404
+Response payload: `{"detail":"Blog post with id=0 not found."}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X PUT -H 'X-Schemathesis-TestCaseId: a70afbac6a6d4add8d5c9185ed0d9443' -d '{"id": 22, "body": "my first blog post", "checksum": "abcde"}' https://restlerdemoserver.pagekite.me/api/blog/posts/0
+
+Or add this option to your command line parameters: --hypothesis-seed=199994441930225008346178251674259097367
+_______________________ DELETE /api/blog/posts/{postId} ________________________
+1. Received a response with a status code, which is not defined in the schema: 404
+
+Declared status codes: 204, 422
+
+Response status: 404
+Response payload: `{"detail":"Blog post with id=0 not found."}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X DELETE -H 'X-Schemathesis-TestCaseId: 7d09c4d34b0d43caaa1cd3faef3d587d' https://restlerdemoserver.pagekite.me/api/blog/posts/0
+
+Or add this option to your command line parameters: --hypothesis-seed=163700849187739281506651378625104004850
+_________________________ GET /api/blog/posts/{postId} _________________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'example': {'body': 'my first blog post', 'id': 99},
+     'properties': {'body': {'title': 'Body', 'type': 'string'},
+                    'id': {'title': 'Id', 'type': 'integer'}},
+     'required': ['id', 'body'],
+     'title': 'BlogPostPublicInput',
+     'type': 'object'}
+
+On instance:
+    None
+
+Response status: 200
+Response payload: `null`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 038668ddd8e049a39f6c33438ff0fde7' https://restlerdemoserver.pagekite.me/api/blog/posts/0
+
+Or add this option to your command line parameters: --hypothesis-seed=87208392478863983995151479724454386947
+_____________________________ POST /api/blog/posts _____________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 201, 422
+
+Response status: 400
+Response payload: `{"detail":"ID must be at least 1"}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 8aa93d1b7af945d2aa11b70eba0d50b6' -d '{"body": "", "id": 0}' https://restlerdemoserver.pagekite.me/api/blog/posts
+
+Or add this option to your command line parameters: --hypothesis-seed=48930651693335708874681786130835012781
+_____________________________ GET /api/blog/posts ______________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200, 422
+
+Response status: 400
+Response payload: `{"detail":"per_page must be at least 2."}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 487771f542a244d38475525d838c0346' 'https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=0'
+
+Or add this option to your command line parameters: --hypothesis-seed=288886664471255926770918982949145606347
+=================================== SUMMARY ====================================
+
+Performed checks:
+    not_a_server_error                              58 / 58 passed          PASSED 
+    status_code_conformance                         28 / 58 passed          FAILED 
+    content_type_conformance                        58 / 58 passed          PASSED 
+    response_headers_conformance                    58 / 58 passed          PASSED 
+    response_schema_conformance                     46 / 58 passed          FAILED 
+
+Network log: all.yaml
+
+Hint: You can visualize test results in Schemathesis.io by using `--report` in your CLI command.
+
+========================= 1 passed, 5 failed in 11.99s =========================

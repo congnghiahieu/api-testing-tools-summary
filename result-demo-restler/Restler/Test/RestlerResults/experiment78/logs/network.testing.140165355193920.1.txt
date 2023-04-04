@@ -1,0 +1,293 @@
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: 1950cbddab7726489624c3d346d3426561c921ad
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: '?'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'per_page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:33.692: Sending: 'GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:34.405: Received: 'HTTP/1.1 404 Not Found\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 22\r\ncontent-type: application/json\r\n\r\n{"detail":"Not Found"}'
+
+
+Generation-1: Rendering Sequence-1
+
+	Request: 1 (Remaining candidate combinations: 1)
+	Request hash: 1950cbddab7726489624c3d346d3426561c921ad
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: '?'
+		- restler_static_string: 'page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: '&'
+		- restler_static_string: 'per_page='
+		- restler_fuzzable_int: '1'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:34.422: Sending: 'GET /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:34.878: Received: 'HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 299\r\ncontent-type: application/json\r\n\r\n{"items":[{"id":11,"body":"my first blog post","checksum":"392b5"},{"id":12,"body":"109ꕁ\\u0016\x840¼","checksum":"cbae0"},{"id":13,"body":"ßÞÊ","checksum":"cc78e"},{"id":14,"body":"(i","checksum":"b4268"},{"id":15,"body":"ø\U00105074\x9f\U00079694\x91*Í","checksum":"41945"}],"per_page":5,"page":10,"total":5}'
+
+
+Generation-1: Rendering Sequence-2
+
+	Request: 1 (Remaining candidate combinations: 8)
+	Request hash: 4fc287fccdb64d22a7d070386dacdde9207540d0
+
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_int: [99, 1, ...]
+		- restler_static_string: ',\n    "body":'
+		+ restler_fuzzable_string: ["my first blog post", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:34.894: Sending: 'POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nContent-Length: 49\r\nUser-Agent: restler/9.1.1\r\n\r\n{\n    "id":99,\n    "body":"my first blog post"}\r\n'
+
+2023-03-09 14:15:35.440: Received: 'HTTP/1.1 201 Created\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{"id":21,"body":"my first blog post"}'
+
+
+Generation-1: Rendering Sequence-3
+
+	Request: 1 (Remaining candidate combinations: 2)
+	Request hash: b6c2efcdc1799e1e6a48374d29a3c2b594bea52c
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'doc'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:35.455: Sending: 'GET /api/doc HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:35.850: Received: 'HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 30\r\ncontent-type: application/json\r\n\r\n{"message":"this is the docs"}'
+
+
+Generation-2: Rendering Sequence-1
+
+	Request: 1 (Current combination: 1 / 8)
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_int: [99, 1, ...]
+		- restler_static_string: ',\n    "body":'
+		+ restler_fuzzable_string: ["my first blog post", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 3cdc49380f5bafe726c625d93ca3d38d271808f5
+
+		- restler_static_string: 'GET '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_blog_posts_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:35.874: Sending: 'POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nContent-Length: 49\r\nUser-Agent: restler/9.1.1\r\n\r\n{\n    "id":99,\n    "body":"my first blog post"}\r\n'
+
+2023-03-09 14:15:36.275: Received: 'HTTP/1.1 201 Created\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{"id":23,"body":"my first blog post"}'
+
+2023-03-09 14:15:36.278: Sending: 'GET /api/blog/posts/23 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:36.907: Received: 'HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{"id":23,"body":"my first blog post"}'
+
+
+Generation-2: Rendering Sequence-2
+
+	Request: 1 (Current combination: 1 / 8)
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_int: [99, 1, ...]
+		- restler_static_string: ',\n    "body":'
+		+ restler_fuzzable_string: ["my first blog post", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 3)
+	Request hash: 67e6114625784b6f417b8bf1b54f2785f3877ab6
+
+		- restler_static_string: 'PUT '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_blog_posts_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		- restler_static_string: '_READER_DELIM_api_blog_posts_post_id_READER_DELIM'
+		- restler_static_string: ',\n    "body":'
+		- restler_static_string: '"_READER_DELIM_api_blog_posts_post_body_READER_DELIM"'
+		- restler_static_string: ',\n    "checksum":'
+		+ restler_fuzzable_string: ["abcde", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:36.930: Sending: 'POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nContent-Length: 49\r\nUser-Agent: restler/9.1.1\r\n\r\n{\n    "id":99,\n    "body":"my first blog post"}\r\n'
+
+2023-03-09 14:15:37.453: Received: 'HTTP/1.1 201 Created\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{"id":25,"body":"my first blog post"}'
+
+2023-03-09 14:15:37.456: Sending: 'PUT /api/blog/posts/25 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nContent-Length: 73\r\nUser-Agent: restler/9.1.1\r\n\r\n{\n    "id":25,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+2023-03-09 14:15:37.872: Received: 'HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\n\r\n'
+
+
+Generation-2: Rendering Sequence-3
+
+	Request: 1 (Current combination: 1 / 8)
+		- restler_static_string: 'POST '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		- restler_static_string: 'Content-Type: '
+		- restler_static_string: 'application/json'
+		- restler_static_string: '\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+		- restler_static_string: '{'
+		- restler_static_string: '\n    "id":'
+		+ restler_fuzzable_int: [99, 1, ...]
+		- restler_static_string: ',\n    "body":'
+		+ restler_fuzzable_string: ["my first blog post", "fuzzstring", ...]
+		- restler_static_string: '}'
+		- restler_static_string: '\r\n'
+
+	Request: 2 (Remaining candidate combinations: 2)
+	Request hash: 78e06fccfed50bd52918df57068206e977b23d96
+
+		- restler_static_string: 'DELETE '
+		- restler_static_string: ''
+		- restler_static_string: '/'
+		- restler_static_string: 'api'
+		- restler_static_string: '/'
+		- restler_static_string: 'blog'
+		- restler_static_string: '/'
+		- restler_static_string: 'posts'
+		- restler_static_string: '/'
+		- restler_static_string: '_READER_DELIM_api_blog_posts_post_id_READER_DELIM'
+		- restler_static_string: ' HTTP/1.1\r\n'
+		- restler_static_string: 'Accept: application/json\r\n'
+		- restler_static_string: 'Host: restlerdemoserver.pagekite.me\r\n'
+		+ restler_refreshable_authentication_token: [token_auth_method, token_refresh_interval, ...]
+		- restler_static_string: '\r\n'
+
+2023-03-09 14:15:37.898: Sending: 'POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nContent-Length: 49\r\nUser-Agent: restler/9.1.1\r\n\r\n{\n    "id":99,\n    "body":"my first blog post"}\r\n'
+
+2023-03-09 14:15:38.325: Received: 'HTTP/1.1 201 Created\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{"id":27,"body":"my first blog post"}'
+
+2023-03-09 14:15:38.330: Sending: 'DELETE /api/blog/posts/27 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:38.822: Received: 'HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:15:33 GMT\r\nserver: uvicorn\r\n\r\n'
+

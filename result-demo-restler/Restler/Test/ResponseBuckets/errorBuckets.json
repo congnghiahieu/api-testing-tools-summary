@@ -1,0 +1,25 @@
+{
+  "404": {
+    "a383b4e2-9175-41a2-b47b-74ae094af2d2": [
+      {
+        "request": {
+          "RequestData": {
+            "method": "GET",
+            "path": "/api/blog/posts",
+            "query": "page=1&per_page=1",
+            "body": ""
+          }
+        },
+        "response": {
+          "ResponseData": {
+            "code": 404,
+            "codeDescription": "Not Found",
+            "content": "{\"detail\":\"Not Found\"}",
+            "isFailure": true,
+            "isBug": false
+          }
+        }
+      }
+    ]
+  }
+}

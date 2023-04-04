@@ -1,0 +1,16 @@
+2023-03-09 14:15:40.221: Sending: 'DELETE /api/blog/posts/27 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:40.913: Received: 'HTTP/1.1 404 Not Found\r\ndate: Thu, 09 Mar 2023 14:15:39 GMT\r\nserver: uvicorn\r\ncontent-length: 22\r\ncontent-type: application/json\r\n\r\n{"detail":"Not Found"}'
+
+2023-03-09 14:15:40.916: Sending: 'DELETE /api/blog/posts/25 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:41.370: Received: 'HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:15:39 GMT\r\nserver: uvicorn\r\n\r\n'
+
+2023-03-09 14:15:41.375: Sending: 'DELETE /api/blog/posts/23 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:41.765: Received: 'HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:15:39 GMT\r\nserver: uvicorn\r\n\r\n'
+
+2023-03-09 14:15:41.768: Sending: 'DELETE /api/blog/posts/21 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Length: 0\r\nUser-Agent: restler/9.1.1\r\n\r\n'
+
+2023-03-09 14:15:42.231: Received: 'HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:15:39 GMT\r\nserver: uvicorn\r\n\r\n'
+

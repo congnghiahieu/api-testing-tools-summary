@@ -1,0 +1,64 @@
+2023-03-09 14:28:48.529: Initializing: Garbage collection every 30 seconds.
+2023-03-09 14:28:48.532: Generation: 1 
+Invalid value generator random seed: 1678372132.17126
+Invalid value generator random seed: 1678372194.2078114
+Invalid value generator random seed: 1678372305.7084186
+Invalid value generator random seed: 1678372369.6034222
+Invalid value generator random seed: 1678372437.523766
+Invalid value generator random seed: 1678372498.2770913
+2023-03-09 14:36:02.063: Generation: 2 
+Invalid value generator random seed: 1678372565.3804288
+Invalid value generator random seed: 1678372633.430578
+Invalid value generator random seed: 1678372702.433894
+Invalid value generator random seed: 1678372766.9535525
+Invalid value generator random seed: 1678372942.2887285
+2023-03-09 14:43:22.880: Generation: 3 
+Invalid value generator random seed: 1678373005.0749688
+Invalid value generator random seed: 1678373045.9795303
+Invalid value generator random seed: 1678373212.3543975
+Invalid value generator random seed: 1678373257.872479
+Invalid value generator random seed: 1678373306.8014987
+Invalid value generator random seed: 1678373348.887624
+Invalid value generator random seed: 1678373413.717689
+2023-03-09 14:51:01.900: Generation: 4 
+Invalid value generator random seed: 1678373466.4805372
+Invalid value generator random seed: 1678373504.5442421
+Invalid value generator random seed: 1678373546.0050974
+Invalid value generator random seed: 1678373584.1905658
+Invalid value generator random seed: 1678373641.870538
+2023-03-09 14:54:48.783: Generation: 5 
+Invalid value generator random seed: 1678373692.3485992
+Invalid value generator random seed: 1678373728.3890464
+Invalid value generator random seed: 1678374248.62236
+Invalid value generator random seed: 1678374281.9536154
+Invalid value generator random seed: 1678374322.148417
+Invalid value generator random seed: 1678374354.6180847
+Invalid value generator random seed: 1678374410.5781176
+2023-03-09 15:07:32.597: Generation: 6 
+Invalid value generator random seed: 1678374458.0827115
+Invalid value generator random seed: 1678374489.961415
+Invalid value generator random seed: 1678374527.9606314
+Invalid value generator random seed: 1678374559.424237
+Invalid value generator random seed: 1678374614.5735316
+2023-03-09 15:11:01.370: Generation: 7 
+Invalid value generator random seed: 1678374665.4146216
+Invalid value generator random seed: 1678374697.3986156
+Invalid value generator random seed: 1678375214.6900256
+Invalid value generator random seed: 1678375248.6521206
+Invalid value generator random seed: 1678375291.0900755
+Invalid value generator random seed: 1678375323.2566717
+Invalid value generator random seed: 1678375386.2512157
+2023-03-09 15:23:51.724: Generation: 8 
+Invalid value generator random seed: 1678375438.60371
+Invalid value generator random seed: 1678375469.1504612
+Invalid value generator random seed: 1678375504.8791046
+Invalid value generator random seed: 1678375534.5922334
+Invalid value generator random seed: 1678375591.3439436
+2023-03-09 15:27:18.269: Generation: 9 
+Invalid value generator random seed: 1678375643.5050855
+Invalid value generator random seed: 1678375673.682334
+Invalid value generator random seed: 1678375709.7082992
+Exception 'Exceed Timeout' applying checker <checkers.invalid_value_checker.InvalidValueChecker object at 0x7febdcddfdf0>
+timeout reached
+2023-03-09 15:28:48.701: Terminating garbage collection. Waiting for max 300 seconds. 
+Done.

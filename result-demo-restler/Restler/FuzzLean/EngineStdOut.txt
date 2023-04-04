@@ -1,0 +1,10 @@
+2023-03-09 14:15:43.409: Initializing: Garbage collection every 30 seconds.
+2023-03-09 14:15:43.412: Generation: 1 
+Invalid value generator random seed: 1678371344.4343596
+Invalid value generator random seed: 1678371396.6041274
+Invalid value generator random seed: 1678371490.3192956
+Invalid value generator random seed: 1678371550.3687296
+2023-03-09 14:20:05.814: Generation: 2 
+Invalid value generator random seed: 1678371735.574739
+2023-03-09 14:23:27.718: Terminating garbage collection. Waiting for max 300 seconds. 
+Done.

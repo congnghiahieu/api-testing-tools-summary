@@ -1,0 +1,72 @@
+{
+    "1950cbddab7726489624c3d346d3426561c921ad_1": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts",
+        "valid": 0,
+        "matching_prefix": [],
+        "request": "GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n",
+        "response": "HTTP/1.1 404 Not Found\r\ndate: Thu, 09 Mar 2023 14:15:42 GMT\r\nserver: uvicorn\r\ncontent-length: 22\r\ncontent-type: application/json\r\n\r\n{\"detail\":\"Not Found\"}"
+    },
+    "1950cbddab7726489624c3d346d3426561c921ad_2": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:17:40 GMT\r\nserver: uvicorn\r\ncontent-length: 299\r\ncontent-type: application/json\r\n\r\n{\"items\":[{\"id\":11,\"body\":\"my first blog post\",\"checksum\":\"392b5\"},{\"id\":12,\"body\":\"109\ua541\\u0016\u00840\u00bc\",\"checksum\":\"cbae0\"},{\"id\":13,\"body\":\"\u00df\u00de\u00ca\",\"checksum\":\"cc78e\"},{\"id\":14,\"body\":\"(i\",\"checksum\":\"b4268\"},{\"id\":15,\"body\":\"\u00f8\udbd4\udc74\u009f\ud9a5\ude94\u0091*\u00cd\",\"checksum\":\"41945\"}],\"per_page\":5,\"page\":10,\"total\":5}"
+    },
+    "4fc287fccdb64d22a7d070386dacdde9207540d0_1": {
+        "verb": "POST",
+        "endpoint": "/api/blog/posts",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    \"id\":99,\n    \"body\":\"my first blog post\"}\r\n",
+        "response": "HTTP/1.1 201 Created\r\ndate: Thu, 09 Mar 2023 14:17:40 GMT\r\nserver: uvicorn\r\ncontent-length: 37\r\ncontent-type: application/json\r\n\r\n{\"id\":48,\"body\":\"my first blog post\"}"
+    },
+    "b6c2efcdc1799e1e6a48374d29a3c2b594bea52c_1": {
+        "verb": "GET",
+        "endpoint": "/api/doc",
+        "valid": 1,
+        "matching_prefix": [],
+        "request": "GET /api/doc HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:17:40 GMT\r\nserver: uvicorn\r\ncontent-length: 30\r\ncontent-type: application/json\r\n\r\n{\"message\":\"this is the docs\"}"
+    },
+    "3cdc49380f5bafe726c625d93ca3d38d271808f5_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "request": "GET /api/blog/posts/149 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n",
+        "response": "HTTP/1.1 200 OK\r\ndate: Thu, 09 Mar 2023 14:17:40 GMT\r\nserver: uvicorn\r\ncontent-length: 38\r\ncontent-type: application/json\r\n\r\n{\"id\":149,\"body\":\"my first blog post\"}"
+    },
+    "67e6114625784b6f417b8bf1b54f2785f3877ab6_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "request": "PUT /api/blog/posts/155 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    \"id\":155,\n    \"body\":\"my first blog post\",\n    \"checksum\":\"abcde\"}\r\n",
+        "response": "HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:20:12 GMT\r\nserver: uvicorn\r\n\r\n"
+    },
+    "78e06fccfed50bd52918df57068206e977b23d96_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "request": "DELETE /api/blog/posts/187 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n",
+        "response": "HTTP/1.1 204 No Content\r\ndate: Thu, 09 Mar 2023 14:21:48 GMT\r\nserver: uvicorn\r\n\r\n"
+    }}

@@ -1,0 +1,13 @@
+Starting task FuzzLean...
+Using python: 'python3' (Python 3.10.6)
+Request coverage (successful / total): 6 / 6
+Attempted requests: 6 / 6
+Bugs were found!
+Bug buckets:
+
+InvalidDynamicObjectChecker_20x: 2
+InvalidValueChecker_500: 1
+PayloadBodyChecker_500: 2
+UseAfterFreeChecker_20x: 1
+Task FuzzLean succeeded.
+Collecting logs...

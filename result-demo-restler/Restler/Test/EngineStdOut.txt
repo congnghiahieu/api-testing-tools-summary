@@ -1,0 +1,5 @@
+2023-03-09 14:15:33.656: Initializing: Garbage collection every 30 seconds.
+2023-03-09 14:15:33.667: Generation: 1 
+2023-03-09 14:15:35.856: Generation: 2 
+2023-03-09 14:15:38.830: Terminating garbage collection. Waiting for max 300 seconds. 
+Done.

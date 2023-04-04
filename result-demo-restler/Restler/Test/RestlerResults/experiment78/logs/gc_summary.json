@@ -1,0 +1,8 @@
+{
+    "delete_stats": {
+        "_api_blog_posts_post_id": {
+            "404": 1,
+            "204": 3
+        }
+    }
+}

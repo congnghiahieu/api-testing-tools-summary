@@ -1,0 +1,57 @@
+InvalidValueChecker_500: 1
+InvalidDynamicObjectChecker_20x: 2
+PayloadBodyChecker_500: 2
+main_driver_500: 1
+UseAfterFreeChecker_20x: 1
+InvalidValueChecker_timeout: 1
+Total Buckets: 8
+-------------
+InvalidValueChecker_500 - Unable to reproduce bug - InvalidValueChecker_500_1.txt
+Attempted to reproduce 14 time(s); Reproduced 0 time(s)
+Hash: InvalidValueChecker_500_5f9bb084cbb3a2529b26bf690142685a65bd355b
+GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Unable to reproduce bug - InvalidDynamicObjectChecker_20x_1.txt
+Attempted to reproduce 2 time(s); Reproduced 0 time(s)
+Hash: InvalidDynamicObjectChecker_20x_080f3c85aec4b427307e03c004ffe30a9e899238
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidDynamicObjectChecker_20x - Unable to reproduce bug - InvalidDynamicObjectChecker_20x_2.txt
+Attempted to reproduce 9 time(s); Reproduced 0 time(s)
+Hash: InvalidDynamicObjectChecker_20x_82a38edf44e1613514ac1ad0303a4efabdbbb47d
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":_READER_DELIM_api_blog_posts_post_id_READER_DELIM,\n    "body":_READER_DELIM_api_blog_posts_post_body_READER_DELIM,\n    "checksum":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Unable to reproduce bug - PayloadBodyChecker_500_1.txt
+Attempted to reproduce 1 time(s); Reproduced 0 time(s)
+Hash: PayloadBodyChecker_500_e85ef29a919c4d5b6c42c62c0c5d147f932717a1
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"body":"_READER_DELIM_api_blog_posts_post_body_READER_DELIM"}
+--------------------------------------------------------------------------------
+PayloadBodyChecker_500 - Unable to reproduce bug - PayloadBodyChecker_500_2.txt
+Attempted to reproduce 1 time(s); Reproduced 0 time(s)
+Hash: PayloadBodyChecker_500_e41bbdd63edccf3cb166e0568d6694d933d609b3
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{"body":0}
+--------------------------------------------------------------------------------
+main_driver_500 - Unable to reproduce bug - main_driver_500_1.txt
+Attempted to reproduce 1 time(s); Reproduced 0 time(s)
+Hash: main_driver_500_82a38edf44e1613514ac1ad0303a4efabdbbb47d
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":_READER_DELIM_api_blog_posts_post_id_READER_DELIM,\n    "body":_READER_DELIM_api_blog_posts_post_body_READER_DELIM,\n    "checksum":fuzzstring}\r\n
+--------------------------------------------------------------------------------
+UseAfterFreeChecker_20x - Unable to reproduce bug - UseAfterFreeChecker_20x_1.txt
+Attempted to reproduce 4 time(s); Reproduced 0 time(s)
+Hash: UseAfterFreeChecker_20x_080f3c85aec4b427307e03c004ffe30a9e899238
+POST /api/blog/posts HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\nauthentication_token_tag\r\n{\n    "id":1,\n    "body":fuzzstring}\r\n
+DELETE /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------
+InvalidValueChecker_timeout - Unable to reproduce bug - InvalidValueChecker_timeout_1.txt
+Attempted to reproduce 1 time(s); Reproduced 0 time(s)
+Hash: InvalidValueChecker_timeout_5f9bb084cbb3a2529b26bf690142685a65bd355b
+GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+GET /api/blog/posts?page=1&per_page=1 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nauthentication_token_tag\r\n
+--------------------------------------------------------------------------------

@@ -1,0 +1,896 @@
+
+Sending invalid request(s):
+'GET /api/blog/posts/723?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/723/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/723?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/723/723 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/725?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/725,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/725,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/725/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725/725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/725 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":725,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/761?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/761/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/761?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/761/761 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/994?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/994/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/994?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/994/994 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/998?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/998,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/998,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/998/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998/998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/998 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":998,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/1009?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1009/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1009?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1009/1009 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/1214?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1214/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/1214?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1214/1214 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/1216?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/1216,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/1216,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1216/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216/1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1216 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1216,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/1227?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1227/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1227?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1227/1227 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/1513?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1513/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/1513?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1513/1513 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/1515?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/1515,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/1515,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1515/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515/1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1515 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1515,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/1529?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1529/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1529?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1529/1529 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/1732?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1732/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/1732?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1732/1732 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/1734?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/1734,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/1734,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1734/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734/1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1734 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1734,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/1744?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1744/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1744?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1744/1744 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/1960?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1960/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/1960?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/1960/1960 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/1962?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/1962,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/1962,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/1962/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962/1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/1962 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":1962,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/1965?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1965/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1965?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/1965/1965 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'GET /api/blog/posts/2146?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/2146/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/2146?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Suspect sequence: 200
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+GET /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'GET /api/blog/posts/2146/2146 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'GET /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+
+Sending invalid request(s):
+'PUT /api/blog/posts/2148?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148?injected_query_string=123,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post?injected_query_string=123",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148?injected_query_string=123,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/?/,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post/?/",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/?/,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148??,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post??",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148??,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/2148,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/2148,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post/my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/2148/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148/2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"{}",\n    "checksum":"abcde"}\r\n'
+
+Suspect sequence: 204
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+GET /api/blog/posts
+POST /api/blog/posts
+PUT /api/blog/posts/_READER_DELIM_api_blog_posts_post_id_READER_DELIM
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/2148 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":{},\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+'PUT /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\nContent-Type: application/json\r\n\r\n{\n    "id":2148,\n    "body":"my first blog post",\n    "checksum":"abcde"}\r\n'
+
+Sending invalid request(s):
+'DELETE /api/blog/posts/2152?injected_query_string=123 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/2152/?/ HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/2152?? HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/2152/2152 HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'
+'DELETE /api/blog/posts/{} HTTP/1.1\r\nAccept: application/json\r\nHost: restlerdemoserver.pagekite.me\r\n\r\n'

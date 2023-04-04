@@ -1,19 +1,19 @@
 Kemongmo
 API server: https://next.kemongmo.com
 API Specs: https://next.kemongmo.com/openapi.json
-Key auth: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE
+Key auth: Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo
 
 Evomaster:
 cd /result
 mkdir Evomaster
 cd Evomaster
-evomaster --problemType REST --blackBox true --outputFormat JAVA_JUNIT_5 --maxTime 1h --ratePerMinute 60 --outputFolder /home/result/Evomaster --header0 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE" --bbTargetUrl "https://next.kemongmo.com" --bbSwaggerUrl https://next.kemongmo.com/openapi.json > log.txt
+evomaster --problemType REST --blackBox true --outputFormat JAVA_JUNIT_5 --maxTime 1h --ratePerMinute 60 --outputFolder /home/result/Evomaster --header0 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo" --bbTargetUrl "https://next.kemongmo.com" --bbSwaggerUrl https://next.kemongmo.com/openapi.json > log.txt
 
 Schemathesis:
 cd /result
 mkdir Schemathesis
 cd Schemathesis
-st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjciLCJleHAiOjE2Nzk2NDYxNzJ9.p4NvnfbvTkG1shVA_wiZfVfNXVXcqXvYv95gt-qPGvE" --base-url "https://next.kemongmo.com" https://next.kemongmo.com/openapi.json > log.txt
+st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo" --base-url "https://next.kemongmo.com" https://next.kemongmo.com/openapi.json > log.txt
 st replay all.yaml --status=FAILURE > fail.txt
 st replay all.yaml --uri="https://next.kemongmo.com/v1/auth/token" > uri_auth_token.txt
 st replay all.yaml --uri="https://next.kemongmo.com/v1/auth/me" > uri_auth_me.txt
@@ -29,3 +29,45 @@ st replay all.yaml --uri="https://next.kemongmo.com/v1/ranking/day" > uri_rankin
 st replay all.yaml --uri="https://next.kemongmo.com/v1/notification" > uri_notification.txt
 
 Restler:
+API URL for Restler: https://raw.githubusercontent.com/congnghiahieu/kemongmospec/master/kemongmo.json
+
+Compile:
+cd /result
+mkdir Restler
+cd Restler
+wget -O kemongmo.json https://raw.githubusercontent.com/congnghiahieu/kemongmospec/master/kemongmo.json
+restler compile --api_spec kemongmo.json
+
+Chú ý: Sửa file engine_settings.json để auth được
+
+*** json
+{
+  "per_resource_settings": {},
+  "max_combinations": 20,
+  "authentication": {
+    "token": {
+      "location": "/home/result/Restler/authentication_token.txt",
+      "token_refresh_interval": 300
+    }
+  }
+}
+***
+
+Tạo file authentication_token.txt:
+
+*** shell
+touch authentication_token.txt
+echo "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo" > authentication_token.txt
+***
+
+Test:
+
+restler test --grammar_file Compile/grammar.py --dictionary_file Compile/dict.json --settings Compile/engine_settings.json --no_ssl > test-log.txt
+
+FuzzLean:
+
+restler fuzz-lean --grammar_file Compile/grammar.py --dictionary_file Compile/dict.json --settings Compile/engine_settings.json --no_ssl > fuzzlean-log.txt
+
+Fuzz:
+
+restler fuzz --grammar_file Compile/grammar.py --dictionary_file Compile/dict.json --settings Compile/engine_settings.json --no_ssl --time_budget 1 > fuzz-log.txt

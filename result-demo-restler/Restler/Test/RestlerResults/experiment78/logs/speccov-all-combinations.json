@@ -1,0 +1,266 @@
+{
+    "1950cbddab7726489624c3d346d3426561c921ad_1": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts",
+        "verb_endpoint": "GET /api/blog/posts",
+        "valid": 0,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "404",
+        "status_text": "Not Found",
+        "error_message": "{\"detail\":\"Not Found\"}",
+        "request_order": 0,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:34",
+            "request_verb": "GET",
+            "request_uri": "/api/blog/posts?page=1&per_page=1",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me"
+            ],
+            "request_body": null,
+            "response_status_code": "404",
+            "response_status_text": "Not Found",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn",
+                "content-length: 22",
+                "content-type: application/json"
+            ],
+            "response_body": "{\"detail\":\"Not Found\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "1950cbddab7726489624c3d346d3426561c921ad_2": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts",
+        "verb_endpoint": "GET /api/blog/posts",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 0,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:34",
+            "request_verb": "GET",
+            "request_uri": "/api/blog/posts",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn",
+                "content-length: 299",
+                "content-type: application/json"
+            ],
+            "response_body": "{\"items\":[{\"id\":11,\"body\":\"my first blog post\",\"checksum\":\"392b5\"},{\"id\":12,\"body\":\"109\ua541\\u0016\u00840\u00bc\",\"checksum\":\"cbae0\"},{\"id\":13,\"body\":\"\u00df\u00de\u00ca\",\"checksum\":\"cc78e\"},{\"id\":14,\"body\":\"(i\",\"checksum\":\"b4268\"},{\"id\":15,\"body\":\"\u00f8\udbd4\udc74\u009f\ud9a5\ude94\u0091*\u00cd\",\"checksum\":\"41945\"}],\"per_page\":5,\"page\":10,\"total\":5}"
+        },
+        "tracked_parameters": {}
+    },
+    "4fc287fccdb64d22a7d070386dacdde9207540d0_1": {
+        "verb": "POST",
+        "endpoint": "/api/blog/posts",
+        "verb_endpoint": "POST /api/blog/posts",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "201",
+        "status_text": "Created",
+        "error_message": null,
+        "request_order": 1,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:35",
+            "request_verb": "POST",
+            "request_uri": "/api/blog/posts",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"id\":99,\n    \"body\":\"my first blog post\"}\r\n",
+            "response_status_code": "201",
+            "response_status_text": "Created",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn",
+                "content-length: 37",
+                "content-type: application/json"
+            ],
+            "response_body": "{\"id\":21,\"body\":\"my first blog post\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "b6c2efcdc1799e1e6a48374d29a3c2b594bea52c_1": {
+        "verb": "GET",
+        "endpoint": "/api/doc",
+        "verb_endpoint": "GET /api/doc",
+        "valid": 1,
+        "matching_prefix": [],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 2,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:35",
+            "request_verb": "GET",
+            "request_uri": "/api/doc",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn",
+                "content-length: 30",
+                "content-type: application/json"
+            ],
+            "response_body": "{\"message\":\"this is the docs\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "3cdc49380f5bafe726c625d93ca3d38d271808f5_1__1": {
+        "verb": "GET",
+        "endpoint": "/api/blog/posts/{postId}",
+        "verb_endpoint": "GET /api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "200",
+        "status_text": "OK",
+        "error_message": null,
+        "request_order": 3,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:36",
+            "request_verb": "GET",
+            "request_uri": "/api/blog/posts/23",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me"
+            ],
+            "request_body": null,
+            "response_status_code": "200",
+            "response_status_text": "OK",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn",
+                "content-length: 37",
+                "content-type: application/json"
+            ],
+            "response_body": "{\"id\":23,\"body\":\"my first blog post\"}"
+        },
+        "tracked_parameters": {}
+    },
+    "67e6114625784b6f417b8bf1b54f2785f3877ab6_1__1": {
+        "verb": "PUT",
+        "endpoint": "/api/blog/posts/{postId}",
+        "verb_endpoint": "PUT /api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "No Content",
+        "error_message": null,
+        "request_order": 4,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:37",
+            "request_verb": "PUT",
+            "request_uri": "/api/blog/posts/25",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me",
+                "Content-Type: application/json"
+            ],
+            "request_body": "{\n    \"id\":25,\n    \"body\":\"my first blog post\",\n    \"checksum\":\"abcde\"}\r\n",
+            "response_status_code": "204",
+            "response_status_text": "No Content",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    },
+    "78e06fccfed50bd52918df57068206e977b23d96_1__1": {
+        "verb": "DELETE",
+        "endpoint": "/api/blog/posts/{postId}",
+        "verb_endpoint": "DELETE /api/blog/posts/{postId}",
+        "valid": 1,
+        "matching_prefix": [
+            {
+                "id": "4fc287fccdb64d22a7d070386dacdde9207540d0_1",
+                "valid": 1
+            }
+        ],
+        "invalid_due_to_sequence_failure": 0,
+        "invalid_due_to_resource_failure": 0,
+        "invalid_due_to_parser_failure": 0,
+        "invalid_due_to_500": 0,
+        "status_code": "204",
+        "status_text": "No Content",
+        "error_message": null,
+        "request_order": 5,
+        "sample_request": {
+            "request_sent_timestamp": null,
+            "response_received_timestamp": "2023-03-09 14:15:38",
+            "request_verb": "DELETE",
+            "request_uri": "/api/blog/posts/27",
+            "request_headers": [
+                "Accept: application/json",
+                "Host: restlerdemoserver.pagekite.me"
+            ],
+            "request_body": null,
+            "response_status_code": "204",
+            "response_status_text": "No Content",
+            "response_headers": [
+                "date: Thu, 09 Mar 2023 14:15:33 GMT",
+                "server: uvicorn"
+            ],
+            "response_body": ""
+        },
+        "tracked_parameters": {}
+    }}

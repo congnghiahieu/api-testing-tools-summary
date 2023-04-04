@@ -1,0 +1,2 @@
+{u'app1': {}}
+ApiTokenTag: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo

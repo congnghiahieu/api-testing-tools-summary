@@ -1,0 +1,10 @@
+{
+  "per_resource_settings": {},
+  "max_combinations": 20
+  "authentication": {
+      "token": {
+        "location": "/home/result/Restler/authentication_token.txt",
+        "token_refresh_interval":  300
+      }
+  }
+}

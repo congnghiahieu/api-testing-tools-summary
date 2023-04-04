@@ -1,0 +1,213 @@
+Replaying cassette: all.yaml
+Total interactions: 58
+
+  ID              : 2
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 404
+  New status code : 404
+
+  ID              : 3
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 404
+  New status code : 404
+
+  ID              : 4
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/30916
+  Old status code : 404
+  New status code : 404
+
+  ID              : 5
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/14602
+  Old status code : 404
+  New status code : 404
+
+  ID              : 6
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/7834114289051994763
+  Old status code : 404
+  New status code : 404
+
+  ID              : 7
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/30767
+  Old status code : 404
+  New status code : 404
+
+  ID              : 8
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-2
+  Old status code : 404
+  New status code : 404
+
+  ID              : 9
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/125
+  Old status code : 404
+  New status code : 404
+
+  ID              : 10
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-763
+  Old status code : 404
+  New status code : 404
+
+  ID              : 11
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-3
+  Old status code : 404
+  New status code : 404
+
+  ID              : 12
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-1278
+  Old status code : 404
+  New status code : 404
+
+  ID              : 13
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 404
+  New status code : 404
+
+  ID              : 14
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 404
+  New status code : 404
+
+  ID              : 15
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 200
+  New status code : 200
+
+  ID              : 16
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/13603
+  Old status code : 200
+  New status code : 200
+
+  ID              : 17
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/53
+  Old status code : 200
+  New status code : 200
+
+  ID              : 18
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 200
+  New status code : 200
+
+  ID              : 19
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-56
+  Old status code : 200
+  New status code : 200
+
+  ID              : 20
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/13303
+  Old status code : 200
+  New status code : 200
+
+  ID              : 21
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/4503
+  Old status code : 200
+  New status code : 200
+
+  ID              : 22
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-125
+  Old status code : 200
+  New status code : 200
+
+  ID              : 23
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/-5067
+  Old status code : 200
+  New status code : 200
+
+  ID              : 24
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/113
+  Old status code : 200
+  New status code : 200
+
+  ID              : 25
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 200
+  New status code : 200
+
+  ID              : 26
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts/0
+  Old status code : 200
+  New status code : 200
+
+  ID              : 28
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 29
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 30
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 31
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 37
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 38
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 39
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 40
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 41
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts
+  Old status code : 400
+  New status code : 400
+
+  ID              : 46
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?page=28339&per_page=-6856
+  Old status code : 400
+  New status code : 400
+
+  ID              : 48
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=-23049
+  Old status code : 400
+  New status code : 400
+
+  ID              : 50
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=-23049
+  Old status code : 400
+  New status code : 400
+
+  ID              : 52
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=-23049
+  Old status code : 400
+  New status code : 400
+
+  ID              : 53
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=-23049
+  Old status code : 400
+  New status code : 400
+
+  ID              : 54
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=-9
+  Old status code : 400
+  New status code : 400
+
+  ID              : 55
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=0
+  Old status code : 400
+  New status code : 400
+
+  ID              : 58
+  URI             : https://restlerdemoserver.pagekite.me/api/blog/posts?per_page=0
+  Old status code : 400
+  New status code : 400
+

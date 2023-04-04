@@ -1,0 +1,7 @@
+PUT /api/blog/posts/{postId}
+	StructMissing_/id/checksum
+	{'body': 'my first blog post'}
+
+	TypeMismatch_body
+	{'body': 0}
+
