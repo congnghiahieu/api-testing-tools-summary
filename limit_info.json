@@ -1,0 +1,27 @@
+{
+  "enum": [
+    "clueless",
+    "lazy",
+    "adventurous",
+    "aggressive",
+    "hieucong",
+    "myfirstblog",
+    "mytest",
+    "teststring",
+    "testkemongmo",
+    "restler",
+    "kemongmo",
+    "kemongmo_va_restler",
+    "restler_only",
+    "@ke@mongmo@",
+    "!abc@#$%",
+    "&&omg&7fadjs",
+    "idontknow",
+    "iwannatest",
+    "testmyapi",
+    "testsucess242",
+    "%$^7fail"
+  ],
+  "minimum": 0,
+  "maximum": 1000000
+}

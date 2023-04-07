@@ -71,3 +71,15 @@ restler fuzz-lean --grammar_file Compile/grammar.py --dictionary_file Compile/di
 Fuzz:
 
 restler fuzz --grammar_file Compile/grammar.py --dictionary_file Compile/dict.json --settings Compile/engine_settings.json --no_ssl --time_budget 1 > fuzz-log.txt
+
+
+
+----------------------------------------------------------------------
+Run 3 tools with limit
+
+Schemathesis
+
+cd result-kemongmo-limit
+mkdir Schemathesis
+cd Schemathesis
+st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo" --base-url "https://next.kemongmo.com" https://next.kemongmo.com/openapi.json > log.txt
