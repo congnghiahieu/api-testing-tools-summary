@@ -82,4 +82,12 @@ Schemathesis
 cd result-kemongmo-limit
 mkdir Schemathesis
 cd Schemathesis
-st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjgiLCJleHAiOjE2Nzk2NTM0NTN9.y4sYM_jYMXDX2f3zcphHZij321K5IDll8_BHqhV62xo" --base-url "https://next.kemongmo.com" https://next.kemongmo.com/openapi.json > log.txt
+st run --verbosity --workers 8 --checks all --cassette-path=all.yaml --hypothesis-max-examples=100 --stateful=links --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzAiLCJleHAiOjE2ODA5Njc2ODl9.VYQWwY39X_UV4FU7TTvO4f2ZpfX_kB2XzvNBHAD23cA" --base-url "https://next.kemongmo.com" "https://hieuciennodeserver.pagekite.me/public/kemongmo_limit.json"> log.txt
+
+
+Evomaster
+
+cd /result-kemongmo-limit
+mkdir Evomaster
+cd Evomaster
+evomaster --problemType REST --blackBox true --outputFormat JAVA_JUNIT_5 --maxTime 1h --ratePerMinute 60 --outputFolder /home/result-kemongmo-limit/Evomaster --header0 "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzAiLCJleHAiOjE2ODA5Njc2ODl9.VYQWwY39X_UV4FU7TTvO4f2ZpfX_kB2XzvNBHAD23cA" --bbTargetUrl "https://next.kemongmo.com" --bbSwaggerUrl "https://raw.githubusercontent.com/congnghiahieu/api-testing-tools-summary/master/kemongmo_limit.json" > log.txt
