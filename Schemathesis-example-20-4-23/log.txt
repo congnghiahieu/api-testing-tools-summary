@@ -1,0 +1,508 @@
+======================= Schemathesis test session starts =======================
+platform Linux -- Python 3.10.6, schemathesis-3.18.5, hypothesis-6.70.0, hypothesis_jsonschema-0.22.1, jsonschema-4.17.3
+rootdir: /home/result/Schemathesis-example-14-9-23
+Hypothesis: deadline=timedelta(milliseconds=15000), database=DirectoryBasedExampleDatabase('/home/result/Schemathesis-example-14-9-23/.hypothesis/examples')
+Schema location: https://example.schemathesis.io/openapi.json
+Base URL: https://example.schemathesis.io/api
+Specification version: Open API 3.0.2
+Workers: 8
+Collected API operations: 36
+Report to Schemathesis.io: ENABLED
+
+..FFEFE.FFFFFF.EFFFFFE....FF.F....FF...
+
+==================================== ERRORS ====================================
+___________________________ POST /api/unsatisfiable ____________________________
+hypothesis.errors.Unsatisfiable: Unable to satisfy schema parameters for this API operation
+
+______________________________ POST /api/invalid _______________________________
+InvalidSchema: Invalid type name
+
+________________________________ POST /api/csv _________________________________
+SerializationNotPossible: Schemathesis can't serialize data to any of the defined media types: text/csv 
+You can register your own serializer with `schemathesis.serializer` and Schemathesis will be able to make API calls with this media type. 
+See https://schemathesis.readthedocs.io/en/stable/how.html#payload-serialization for more information.
+
+_____________________ GET /api/missing_path_parameter/{id} _____________________
+InvalidSchema: Path parameter 'id' is not defined
+
+Add this option to your command line parameters to see full tracebacks: --show-errors-tracebacks
+
+If you need assistance in solving this, feel free to join our Discord server and report it:
+
+  https://discord.gg/R9ASRAmHnA
+
+=================================== FAILURES ===================================
+________________________________ GET /api/empty ________________________________
+1. Received a response with 'text/html; charset=utf-8' Content-Type, but it is not declared in the schema.
+
+Defined content types: application/json
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: e46b44ae310e47f3a1309bc941e00691' https://example.schemathesis.io/api/empty
+
+Or add this option to your command line parameters: --hypothesis-seed=185700723605331490723632180737470897497
+____________________________ GET /api/empty_string _____________________________
+1. Received a response with 'text/html; charset=utf-8' Content-Type, but it is not declared in the schema.
+
+Defined content types: application/json
+
+Response status: 200
+Response payload: ``
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: f350f6b6091d4fde888abecdccc813d1' https://example.schemathesis.io/api/empty_string
+
+Or add this option to your command line parameters: --hypothesis-seed=337474824354985795899575812984730883292
+_______________________________ GET /api/failure _______________________________
+1. Received a response with 'text/html; charset=utf-8' Content-Type, but it is not declared in the schema.
+
+Defined content types: application/json
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 93c869b669bc448ea9fc706e120ed6c3' https://example.schemathesis.io/api/failure
+
+Or add this option to your command line parameters: --hypothesis-seed=303806189984611299505138454976439346338
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 93c869b669bc448ea9fc706e120ed6c3' https://example.schemathesis.io/api/failure
+
+Or add this option to your command line parameters: --hypothesis-seed=303806189984611299505138454976439346338
+______________________________ POST /api/payload _______________________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'additionalProperties': False,
+     'example': {'name': 'John'},
+     'properties': {'age': {'exclusiveMinimum': True,
+                            'minimum': 0,
+                            'type': 'integer'},
+                    'boolean': {'type': 'boolean'},
+                    'name': {'type': 'string'},
+                    'nested': {'items': {'exclusiveMaximum': True,
+                                         'exclusiveMinimum': True,
+                                         'maximum': 10,
+                                         'minimum': 0,
+                                         'type': 'integer'},
+                               'type': 'array'}},
+     'required': ['name'],
+     'type': 'object'}
+
+On instance:
+    None
+
+Response status: 200
+Response payload: `null
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 8c384150af5d4fbd8a6fd7f7a4334fd8' https://example.schemathesis.io/api/payload
+
+Or add this option to your command line parameters: --hypothesis-seed=64748718658286380294694138055821202878
+________________________________ GET /api/basic ________________________________
+1. Received a response with a status code, which is not defined in the schema: 401
+
+Declared status codes: 200
+
+Response status: 401
+Response payload: `{"detail":"Unauthorized"}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Basic Og==' -H 'X-Schemathesis-TestCaseId: 7a08423f6e3c4125895eb0a8179f3b1e' https://example.schemathesis.io/api/basic
+
+Or add this option to your command line parameters: --hypothesis-seed=245468495132185207820016094623502090933
+__________________________ GET /api/multiple_failures __________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 13e97fa56c9a4c108e75d00fab6303fd' 'https://example.schemathesis.io/api/multiple_failures?id=0'
+
+Or add this option to your command line parameters: --hypothesis-seed=230775097782200030149197286796795748689
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 13e97fa56c9a4c108e75d00fab6303fd' 'https://example.schemathesis.io/api/multiple_failures?id=0'
+
+Or add this option to your command line parameters: --hypothesis-seed=230775097782200030149197286796795748689
+
+
+3. Received a response with a status code, which is not defined in the schema: 504
+
+Declared status codes: 200
+
+Response status: 504
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>504 Gateway Timeout</title>
+<h1>Gateway Timeout</h1>
+<p>The connection to an upstream server timed out.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 00ac2e9859534cf09c19a87968bf8e5b' 'https://example.schemathesis.io/api/multiple_failures?id=1'
+
+Or add this option to your command line parameters: --hypothesis-seed=230775097782200030149197286796795748689
+
+
+4. Received a response with 5xx status code: 504
+
+Response status: 504
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>504 Gateway Timeout</title>
+<h1>Gateway Timeout</h1>
+<p>The connection to an upstream server timed out.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 00ac2e9859534cf09c19a87968bf8e5b' 'https://example.schemathesis.io/api/multiple_failures?id=1'
+
+Or add this option to your command line parameters: --hypothesis-seed=230775097782200030149197286796795748689
+_______________________________ POST /api/teapot _______________________________
+1. Received a response with a status code, which is not defined in the schema: 418
+
+Declared status codes: 200
+
+Response status: 418
+Response payload: `{"success":true}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: b2141d09d09e41e8862ee3f8540fe4f1' https://example.schemathesis.io/api/teapot
+
+Or add this option to your command line parameters: --hypothesis-seed=228846141907464198070649817284597434871
+________________________________ GET /api/text _________________________________
+1. Received a response with 'text/plain' Content-Type, but it is not declared in the schema.
+
+Defined content types: application/json
+
+Response status: 200
+Response payload: `Text response`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: b9ea10914de641e7beedd30ef1bd7361' https://example.schemathesis.io/api/text
+
+Or add this option to your command line parameters: --hypothesis-seed=218106753340758451745341973582604593266
+_____________________________ GET /api/get_payload _____________________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'additionalProperties': False,
+     'example': {'name': 'John'},
+     'properties': {'age': {'exclusiveMinimum': True,
+                            'minimum': 0,
+                            'type': 'integer'},
+                    'boolean': {'type': 'boolean'},
+                    'name': {'type': 'string'},
+                    'nested': {'items': {'exclusiveMaximum': True,
+                                         'exclusiveMinimum': True,
+                                         'maximum': 10,
+                                         'minimum': 0,
+                                         'type': 'integer'},
+                               'type': 'array'}},
+     'required': ['name'],
+     'type': 'object'}
+
+On instance:
+    None
+
+Response status: 200
+Response payload: `null
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 5a954afbcee847a5b04d9f97db8a73b7' https://example.schemathesis.io/api/get_payload
+
+Or add this option to your command line parameters: --hypothesis-seed=186452903218536126679187275888224304668
+___________________________ GET /api/malformed_json ____________________________
+1. The received response is not valid JSON:
+
+    {malformed}
+
+Exception: 
+
+    Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+Response status: 200
+Response payload: `{malformed}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 06aea6609fb44d72b010fc65ed72f1c8' https://example.schemathesis.io/api/malformed_json
+
+Or add this option to your command line parameters: --hypothesis-seed=89406776538548068634300223422500556056
+__________________________ GET /api/invalid_response ___________________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+'success' is a required property
+
+Failed validating 'required' in schema:
+    {'properties': {'success': {'type': 'boolean'}},
+     'required': ['success'],
+     'type': 'object'}
+
+On instance:
+    {'random': 'key'}
+
+Response status: 200
+Response payload: `{"random":"key"}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 3c2bfecfffa341d6afcfc68ca6e8f796' https://example.schemathesis.io/api/invalid_response
+
+Or add this option to your command line parameters: --hypothesis-seed=284507447009183813112660392630630477131
+____________________________ GET /api/custom_format ____________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200
+
+Response status: 400
+Response payload: `{"detail":"Invalid `id`"}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 675dcbc8ad8946d2a4841ba9d4a412d2' 'https://example.schemathesis.io/api/custom_format?id='
+
+Or add this option to your command line parameters: --hypothesis-seed=130604048955164086847998067887198808780
+____________________________ POST /api/upload_file _____________________________
+[FLAKY] Schemathesis was not able to reliably reproduce this failure
+
+1. Response timed out after 10000.00ms
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 46123e3cebf649cba688052896dffb18' -d '--df76f0484378f15a95c645e07598ef24
+Content-Disposition: form-data; name="data"; filename="data"
+
+ 
+--df76f0484378f15a95c645e07598ef24
+Content-Disposition: form-data; name="note"
+
+
+--df76f0484378f15a95c645e07598ef24--
+' https://example.schemathesis.io/api/upload_file
+
+Or add this option to your command line parameters: --hypothesis-seed=259142282246504211099917659009260946270
+____________________________ POST /api/credit_card _____________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200
+
+Response status: 400
+Response payload: `{"detail":"Invalid credit card number"}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: afb94b173eac47a1a916e18d3da9105d' -d '{"number": "1"}' https://example.schemathesis.io/api/credit_card
+
+Or add this option to your command line parameters: --hypothesis-seed=177125839446091675439028941779252288775
+
+
+2. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 7a90e3e77d3d41d6a35d3dcd534102d5' -d '{"number": ":"}' https://example.schemathesis.io/api/credit_card
+
+Or add this option to your command line parameters: --hypothesis-seed=177125839446091675439028941779252288775
+
+
+3. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 7a90e3e77d3d41d6a35d3dcd534102d5' -d '{"number": ":"}' https://example.schemathesis.io/api/credit_card
+
+Or add this option to your command line parameters: --hypothesis-seed=177125839446091675439028941779252288775
+_____________________________ POST /api/unexpected _____________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200
+
+Response status: 400
+Response payload: `{"detail":"Expects something else"}
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'X-Schemathesis-TestCaseId: 0659936406db497bb24019daa6ed34a9' -d '{"foo": "00000"}' https://example.schemathesis.io/api/unexpected
+
+Or add this option to your command line parameters: --hypothesis-seed=161687825636364695899222126644616441410
+_____________________ GET /api/invalid_path_parameter/{id} _____________________
+[FLAKY] Schemathesis was not able to reliably reproduce this failure
+
+1. Response timed out after 10000.00ms
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 73c06fb2024f4857a81e76f6bc25e1cf' https://example.schemathesis.io/api/invalid_path_parameter/0
+
+Or add this option to your command line parameters: --hypothesis-seed=102366581268979821667142996249544304237
+_________________________ GET /api/path_variable/{key} _________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200
+
+Response status: 400
+Response payload: `<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 541c13d1b3304763b13fb07ed56f54dd' https://example.schemathesis.io/api/path_variable/%00
+
+Or add this option to your command line parameters: --hypothesis-seed=29749576142925008072460999280331095634
+__________________________ PATCH /api/users/{user_id} __________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200, 404
+
+Response status: 400
+Response payload: `<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X PATCH -H 'X-Schemathesis-TestCaseId: 175c562ba11c420282ea39b25abaf435' -d '{"first_name": "gO\u00e0/\ud8c5\udcde\u00b7", "last_name": null}' 'https://example.schemathesis.io/api/users/%C3%90%00%C3%AE%134?common=-27161'
+
+Or add this option to your command line parameters: --hypothesis-seed=252293362808662239006936954476090643901
+
+
+2. Response timed out after 10000.00ms
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X PATCH -H 'X-Schemathesis-TestCaseId: 9a798f76ef734bef8351effc234b9ceb' -d '{"first_name": "\u0c03\u0011\ud92a\udf38\u0085,", "last_name": "\u0082z\u00d2\uda97\ude82\u00e7\u008e\u00d8"}' 'https://example.schemathesis.io/api/users/%F2%A4%A3%B5%F1%97%BE%BE?common=-15940'
+
+Or add this option to your command line parameters: --hypothesis-seed=252293362808662239006936954476090643901
+___________________________ GET /api/users/{user_id} ___________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200, 404
+
+Response status: 400
+Response payload: `<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'X-Schemathesis-TestCaseId: 5c5a95cefc2846b189b5a0c82e1de8a6' 'https://example.schemathesis.io/api/users/%00?code=0&common=0&user_id='
+
+Or add this option to your command line parameters: --hypothesis-seed=13973874661829139668897391292745823999
+=================================== SUMMARY ====================================
+
+Performed checks:
+    not_a_server_error                              1503 / 1540 passed          FAILED 
+    status_code_conformance                         1426 / 1540 passed          FAILED 
+    content_type_conformance                        1532 / 1540 passed          FAILED 
+    response_headers_conformance                    1540 / 1540 passed          PASSED 
+    response_schema_conformance                     1530 / 1540 passed          FAILED 
+    request_timeout                                 0 / 4 passed                FAILED 
+
+Network log: all.yaml
+
+WARNINGS:
+  - Most of the responses from `GET /api/basic` have a 401 status code. Did you specify proper API credentials?
+  - Most of the responses from `GET /api/headers` have a 401 status code. Did you specify proper API credentials?
+
+Compressed report size: 196 KB
+Uploading reports to https://api.schemathesis.io/ ...
+Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: COMPLETED
+
+Your test report is successfully uploaded! Please, follow this link for details:
+
+https://app.schemathesis.io/r/WbpkA/
+
+================== 16 passed, 19 failed, 4 errored in 131.98s ==================

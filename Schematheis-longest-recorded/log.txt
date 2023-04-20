@@ -1,0 +1,609 @@
+======================= Schemathesis test session starts =======================
+platform Linux -- Python 3.10.6, schemathesis-3.18.5, hypothesis-6.70.0, hypothesis_jsonschema-0.22.1, jsonschema-4.17.3
+rootdir: /home/result/Schemathesis
+Hypothesis: deadline=timedelta(milliseconds=15000), database=DirectoryBasedExampleDatabase('/home/result/Schemathesis/.hypothesis/examples')
+Schema location: https://next.kemongmo.com/openapi.json
+Base URL: https://next.kemongmo.com
+Specification version: Open API 3.0.2
+Workers: 8
+Collected API operations: 32
+Report to Schemathesis.io: ENABLED
+
+.FF.F..F...F..FFF.FFFFFF.F...FFF
+
+============================== HYPOTHESIS OUTPUT ===============================
+WARNING: Hypothesis has spent more than five minutes working to shrink a failing example, and stopped because it is making very slow progress.  When you re-run your tests, shrinking will resume and may take this long before aborting again.
+PLEASE REPORT THIS if you can provide a reproducing example, so that we can improve shrinking performance for everyone.
+=================================== FAILURES ===================================
+________________________ POST /v1/users/update_nickname ________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 4dbe8ce8a77a4fb5bf2b8280576ddcda' -d nick_name=0 https://next.kemongmo.com/v1/users/update_nickname
+
+Or add this option to your command line parameters: --hypothesis-seed=14679264401345275449647289332630826928
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 4dbe8ce8a77a4fb5bf2b8280576ddcda' -d nick_name=0 https://next.kemongmo.com/v1/users/update_nickname
+
+Or add this option to your command line parameters: --hypothesis-seed=14679264401345275449647289332630826928
+_____________________________ POST /v1/auth/token ______________________________
+1. Received a response with a status code, which is not defined in the schema: 401
+
+Declared status codes: 200, 404, 422
+
+Response status: 401
+Response payload: `{"detail":"Could not validate credentials"}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: e55de13670f84b7b84702db8fa1d018f' -d 'password=0&username=0' https://next.kemongmo.com/v1/auth/token
+
+Or add this option to your command line parameters: --hypothesis-seed=280694980324250592748080264430548848847
+__________________________ PUT /v1/users/update_info ___________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X PUT -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 86d2e34adb0549ffb729e1ff21fc1796' -d '--0df922cbdf0d9b4e3bf5eda43e3a5d52
+Content-Disposition: form-data; name="nick_name"
+
+0
+--0df922cbdf0d9b4e3bf5eda43e3a5d52
+Content-Disposition: form-data; name="date_of_birth"
+
+0
+--0df922cbdf0d9b4e3bf5eda43e3a5d52
+Content-Disposition: form-data; name="avatar"; filename="avatar"
+
+
+--0df922cbdf0d9b4e3bf5eda43e3a5d52--
+' https://next.kemongmo.com/v1/users/update_info
+
+Or add this option to your command line parameters: --hypothesis-seed=22587034388488862429333579508696840486
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X PUT -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 86d2e34adb0549ffb729e1ff21fc1796' -d '--685ac946e4dc9b58778786424d86c980
+Content-Disposition: form-data; name="nick_name"
+
+0
+--685ac946e4dc9b58778786424d86c980
+Content-Disposition: form-data; name="date_of_birth"
+
+0
+--685ac946e4dc9b58778786424d86c980
+Content-Disposition: form-data; name="avatar"; filename="avatar"
+
+
+--685ac946e4dc9b58778786424d86c980--
+' https://next.kemongmo.com/v1/users/update_info
+
+Or add this option to your command line parameters: --hypothesis-seed=22587034388488862429333579508696840486
+___________________________ POST /v1/records/upload ____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 6146d1e9ee1e4c13bb1cbbee39f05bd3' -d '--2732e8de3e57783dd04c65db145ec332
+Content-Disposition: form-data; name="distance"
+
+0.0
+--2732e8de3e57783dd04c65db145ec332
+Content-Disposition: form-data; name="duration"
+
+0.0
+--2732e8de3e57783dd04c65db145ec332
+Content-Disposition: form-data; name="record_date"
+
+0
+--2732e8de3e57783dd04c65db145ec332
+Content-Disposition: form-data; name="image_file"; filename="image_file"
+
+
+--2732e8de3e57783dd04c65db145ec332--
+' https://next.kemongmo.com/v1/records/upload
+
+Or add this option to your command line parameters: --hypothesis-seed=261348276681751464474169201547739088106
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 6146d1e9ee1e4c13bb1cbbee39f05bd3' -d '--c6c95c4385a44cef6298d13f91424f39
+Content-Disposition: form-data; name="distance"
+
+0.0
+--c6c95c4385a44cef6298d13f91424f39
+Content-Disposition: form-data; name="duration"
+
+0.0
+--c6c95c4385a44cef6298d13f91424f39
+Content-Disposition: form-data; name="record_date"
+
+0
+--c6c95c4385a44cef6298d13f91424f39
+Content-Disposition: form-data; name="image_file"; filename="image_file"
+
+
+--c6c95c4385a44cef6298d13f91424f39--
+' https://next.kemongmo.com/v1/records/upload
+
+Or add this option to your command line parameters: --hypothesis-seed=261348276681751464474169201547739088106
+_____________________ POST /v1/records/get_records_by_user _____________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 0bb950f3a2d44f7aba85aa8824b28825' -d user_id=%3A https://next.kemongmo.com/v1/records/get_records_by_user
+
+Or add this option to your command line parameters: --hypothesis-seed=46786755214316285720764551912961744840
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 0bb950f3a2d44f7aba85aa8824b28825' -d user_id=%3A https://next.kemongmo.com/v1/records/get_records_by_user
+
+Or add this option to your command line parameters: --hypothesis-seed=46786755214316285720764551912961744840
+_____________________ POST /v1/records/evidence_other_user _____________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 650fb1bf4cdd4bcc88b0b967c480d8a4' -d 'file_name=0&user_id=%3A' https://next.kemongmo.com/v1/records/evidence_other_user
+
+Or add this option to your command line parameters: --hypothesis-seed=323925487224430438571599606711431179788
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 650fb1bf4cdd4bcc88b0b967c480d8a4' -d 'file_name=0&user_id=%3A' https://next.kemongmo.com/v1/records/evidence_other_user
+
+Or add this option to your command line parameters: --hypothesis-seed=323925487224430438571599606711431179788
+_____________________________ POST /v1/ranking/day _____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5ce45d12b8ca470f812b8ac6963ae439' -d input_date=0 https://next.kemongmo.com/v1/ranking/day
+
+Or add this option to your command line parameters: --hypothesis-seed=169373672538065895397437045292063924762
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5ce45d12b8ca470f812b8ac6963ae439' -d input_date=0 https://next.kemongmo.com/v1/ranking/day
+
+Or add this option to your command line parameters: --hypothesis-seed=169373672538065895397437045292063924762
+____________________________ POST /v1/ranking/week _____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5b75fce2c9984f148445705e4c708263' -d input_date=0 https://next.kemongmo.com/v1/ranking/week
+
+Or add this option to your command line parameters: --hypothesis-seed=111446545620720585566392777905084073908
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5b75fce2c9984f148445705e4c708263' -d input_date=0 https://next.kemongmo.com/v1/ranking/week
+
+Or add this option to your command line parameters: --hypothesis-seed=111446545620720585566392777905084073908
+____________________________ POST /v1/ranking/month ____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 280dd595d0aa4116b630c7f025c706d3' -d input_date=0 https://next.kemongmo.com/v1/ranking/month
+
+Or add this option to your command line parameters: --hypothesis-seed=220777290841562979235626857583729269166
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 280dd595d0aa4116b630c7f025c706d3' -d input_date=0 https://next.kemongmo.com/v1/ranking/month
+
+Or add this option to your command line parameters: --hypothesis-seed=220777290841562979235626857583729269166
+______________________ POST /v1/ranking/ranking_calculate ______________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'string'
+
+Failed validating 'type' in schema['properties']['error']:
+    {'title': 'Error', 'type': 'string'}
+
+On instance['error']:
+    None
+
+Response status: 200
+Response payload: `{"result":"OK","error":null}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: ddf05a56588a4666b41b07c4befc4056' https://next.kemongmo.com/v1/ranking/ranking_calculate
+
+Or add this option to your command line parameters: --hypothesis-seed=322536806585649235280663895264636519269
+____________________________ POST /v1/ranking/year _____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: e163c9648e114e48a10109d1037a24d6' -d input_date=0 https://next.kemongmo.com/v1/ranking/year
+
+Or add this option to your command line parameters: --hypothesis-seed=258241580856975786047274048378859193231
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: e163c9648e114e48a10109d1037a24d6' -d input_date=0 https://next.kemongmo.com/v1/ranking/year
+
+Or add this option to your command line parameters: --hypothesis-seed=258241580856975786047274048378859193231
+____________________________ POST /v1/ranking/term _____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 9523a404f67b44f087302348e8c118c7' -d input_date=0 https://next.kemongmo.com/v1/ranking/term
+
+Or add this option to your command line parameters: --hypothesis-seed=331125113497203601980497182565930959917
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 9523a404f67b44f087302348e8c118c7' -d input_date=0 https://next.kemongmo.com/v1/ranking/term
+
+Or add this option to your command line parameters: --hypothesis-seed=331125113497203601980497182565930959917
+___________________________ GET /v1/users/{user_id} ____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: f70145c4bf154a92b53a085c5838bdaa' https://next.kemongmo.com/v1/users/9223372036854775808
+
+Or add this option to your command line parameters: --hypothesis-seed=77345946423576676757949543304059505050
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: f70145c4bf154a92b53a085c5838bdaa' https://next.kemongmo.com/v1/users/9223372036854775808
+
+Or add this option to your command line parameters: --hypothesis-seed=77345946423576676757949543304059505050
+__________________________ POST /v1/notification/user __________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: db72eada3bf0443cafc995c4b9c263a3' -d date_input=0 https://next.kemongmo.com/v1/notification/user
+
+Or add this option to your command line parameters: --hypothesis-seed=310024374032948197502109437456457151933
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: db72eada3bf0443cafc995c4b9c263a3' -d date_input=0 https://next.kemongmo.com/v1/notification/user
+
+Or add this option to your command line parameters: --hypothesis-seed=310024374032948197502109437456457151933
+___________________________ POST /v1/ranking/period ____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: e873c6d7fa5642c18b4f1bcacb78b603' -d 'end_date=0&start_date=0' https://next.kemongmo.com/v1/ranking/period
+
+Or add this option to your command line parameters: --hypothesis-seed=147189914380518563578543383718681189461
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: e873c6d7fa5642c18b4f1bcacb78b603' -d 'end_date=0&start_date=0' https://next.kemongmo.com/v1/ranking/period
+
+Or add this option to your command line parameters: --hypothesis-seed=147189914380518563578543383718681189461
+________________________________ GET /v1/users/ ________________________________
+1. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'string'
+
+Failed validating 'type' in schema['items']['properties']['nick_name']:
+    {'title': 'Nick Name', 'type': 'string'}
+
+On instance[3]['nick_name']:
+    None
+
+Response status: 200
+Response payload: `[{"username":"admin","nick_name":"D5BOWWvKK","date_of_birth":"pXK","create_at":"2023-03-03T04:46:21.306894","avatar":"default.jpg","id":1},{"username":"test","nick_name":"-®çãß󃆜\u0002BËl\u000f􄫌\u0005","date_of_birth":"񉏣\u000fÑV","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":2},{"username":"hoan","nick_name":"JBZ","date_of_birth":"Wi5JIza3gMIi","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":3},{"username":"","nick_name":null,"date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":4},{"username":"[g","nick_name":"","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":5},{"username":"hoan1","nick_name":"123","date_of_birth":"string","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":6},{"username":"hoan111","nick_name":"321","date_of_birth":"string","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":7},{"username":"F","nick_name":",kI","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":8},{"username":"±\r\u0002é􌧇󥥓t\n","nick_name":"\u0010򀃳񮱧$òÖ¯","date_of_birth":"\u001bre&¨è\u0012𹄎","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":9},{"username":"󎎇񃖪©(","nick_name":"!\u0001򘧥","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":10},{"username":"񅭳1×\u0004¿򣗸»_Ø𿦟¡","nick_name":"Ä(>nfÈ","date_of_birth":"R","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":11},{"username":"񊐺񱫟񎬗","nick_name":"F󕣄r¼\"","date_of_birth":"Á¤򖶴","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":12},{"username":"񗷃ã","nick_name":"p勿򄄭7􌀊","date_of_birth":"\u001b","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":13},{"username":"'","nick_name":"¾5£򷉯\\¹󩂅ª񓁖À¶ã\u0004","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":14},{"username":"±~£rkàHì󠣕k","nick_name":"Ò","date_of_birth":"'Ak\u0010¡\u001a3󨦞å񉗶񧸶eÐ,󄼐g","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":15},{"username":"^ZE񩜜","nick_name":"\u0011\n\f􌆳𚙀\fÓ\u001d󊆦×-·_","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":16},{"username":"󾕋õ¶","nick_name":"2","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":17},{"username":"È󣔅üá6!ÙÄ5","nick_name":"񢅀","date_of_birth":"2@äeç񕩔\u000e","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":18},{"username":"Â𵉎=\u0013","nick_name":"","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":19},{"username":"É70𷎡s􇇷¶ë򁥰ø6","nick_name":"E!\u0012ªÏÉZÜ𛦳Ôj񕿀N񒉨p\u001b§\u0018󿦏","date_of_birth":"\u0003","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":20}]`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 164e1aeeb9e94ee7af7e57e5888acad8' https://next.kemongmo.com/v1/users/
+
+Or add this option to your command line parameters: --hypothesis-seed=204667807228262835121675078467355804871
+
+
+2. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'string'
+
+Failed validating 'type' in schema['items']['properties']['date_of_birth']:
+    {'title': 'Date Of Birth', 'type': 'string'}
+
+On instance[0]['date_of_birth']:
+    None
+
+Response status: 200
+Response payload: `[{"username":"[g","nick_name":"","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":5},{"username":"hoan1","nick_name":"123","date_of_birth":"string","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":6},{"username":"hoan111","nick_name":"321","date_of_birth":"string","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":7},{"username":"F","nick_name":",kI","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":8},{"username":"±\r\u0002é􌧇󥥓t\n","nick_name":"\u0010򀃳񮱧$òÖ¯","date_of_birth":"\u001bre&¨è\u0012𹄎","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":9},{"username":"󎎇񃖪©(","nick_name":"!\u0001򘧥","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":10},{"username":"񅭳1×\u0004¿򣗸»_Ø𿦟¡","nick_name":"Ä(>nfÈ","date_of_birth":"R","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":11},{"username":"񊐺񱫟񎬗","nick_name":"F󕣄r¼\"","date_of_birth":"Á¤򖶴","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":12},{"username":"񗷃ã","nick_name":"p勿򄄭7􌀊","date_of_birth":"\u001b","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":13},{"username":"'","nick_name":"¾5£򷉯\\¹󩂅ª񓁖À¶ã\u0004","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":14},{"username":"±~£rkàHì󠣕k","nick_name":"Ò","date_of_birth":"'Ak\u0010¡\u001a3󨦞å񉗶񧸶eÐ,󄼐g","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":15},{"username":"^ZE񩜜","nick_name":"\u0011\n\f􌆳𚙀\fÓ\u001d󊆦×-·_","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":16},{"username":"󾕋õ¶","nick_name":"2","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":17},{"username":"È󣔅üá6!ÙÄ5","nick_name":"񢅀","date_of_birth":"2@äeç񕩔\u000e","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":18},{"username":"Â𵉎=\u0013","nick_name":"","date_of_birth":"","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":19},{"username":"É70𷎡s􇇷¶ë򁥰ø6","nick_name":"E!\u0012ªÏÉZÜ𛦳Ôj񕿀N񒉨p\u001b§\u0018󿦏","date_of_birth":"\u0003","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":20},{"username":"󄔯","nick_name":"À\n´ça","date_of_birth":"ñ񢘒","create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":21},{"username":"¤¯󽃯É","nick_name":">ÐA8","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":22},{"username":"򲴯\u0004nLí","nick_name":"򂨽Ï\u0016UÒÞ","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":23},{"username":"pw","nick_name":"揟;\u0018|Èä󙝕","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":24}]`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: d19266251f554173a2cbe835b1a2026d' 'https://next.kemongmo.com/v1/users/?skip=4'
+
+Or add this option to your command line parameters: --hypothesis-seed=204667807228262835121675078467355804871
+
+
+3. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5f372b68844846aaaa13be22f3cb8824' 'https://next.kemongmo.com/v1/users/?limit=9223372036854775808'
+
+Or add this option to your command line parameters: --hypothesis-seed=204667807228262835121675078467355804871
+
+
+4. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5f372b68844846aaaa13be22f3cb8824' 'https://next.kemongmo.com/v1/users/?limit=9223372036854775808'
+
+Or add this option to your command line parameters: --hypothesis-seed=204667807228262835121675078467355804871
+____________________________ GET /v1/notification/ _____________________________
+1. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5829c869fac34e708bbdbb7d83b4c8d5' 'https://next.kemongmo.com/v1/notification/?user_id=9223372036854775808'
+
+Or add this option to your command line parameters: --hypothesis-seed=194424382006713180161996971374631412364
+
+
+2. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X GET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 5829c869fac34e708bbdbb7d83b4c8d5' 'https://next.kemongmo.com/v1/notification/?user_id=9223372036854775808'
+
+Or add this option to your command line parameters: --hypothesis-seed=194424382006713180161996971374631412364
+_______________________________ POST /v1/users/ ________________________________
+1. Received a response with a status code, which is not defined in the schema: 400
+
+Declared status codes: 200, 404, 422
+
+Response status: 400
+Response payload: `{"detail":"User already registered"}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 7206cb4d7be54feebddd1aa3458623fc' -d '{"password": "", "username": ""}' https://next.kemongmo.com/v1/users/
+
+Or add this option to your command line parameters: --hypothesis-seed=316769117862052102048116849210082392684
+
+
+2. The received response does not conform to the defined schema!
+
+Details: 
+
+None is not of type 'string'
+
+Failed validating 'type' in schema['properties']['date_of_birth']:
+    {'title': 'Date Of Birth', 'type': 'string'}
+
+On instance['date_of_birth']:
+    None
+
+Response status: 200
+Response payload: `{"username":"Ā01","nick_name":"񰸇7","date_of_birth":null,"create_at":"2023-03-03T04:47:54.275735","avatar":"default.jpg","id":293}`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 4e67c9eb5bc94e8880094c9ddf1a8178' -d '{"password": "", "username": "\u010001", "": [], "nick_name": "\ud983\ude077"}' https://next.kemongmo.com/v1/users/
+
+Or add this option to your command line parameters: --hypothesis-seed=316769117862052102048116849210082392684
+
+
+3. Received a response with a status code, which is not defined in the schema: 500
+
+Declared status codes: 200, 404, 422
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 1552e118a8b9450a84dc5b19b4a2ad55' -d '{"password": "\ud882\udd81\u00001\ud804\udc01\ud982\ude01\u009f\ud982\udd00\ud803\udd80", "username": "\u001d\u0089", "create_at": "0404-08-03T00:12:00.065792-01:00", "": [], "\ud802\udf00": [0.0, null, {}], "nick_name": "\u00a6"}' https://next.kemongmo.com/v1/users/
+
+Or add this option to your command line parameters: --hypothesis-seed=316769117862052102048116849210082392684
+
+
+4. Received a response with 5xx status code: 500
+
+Response status: 500
+Response payload: `Internal Server Error`
+
+Run this cURL command to reproduce this failure: 
+
+    curl -X POST -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyNDAiLCJleHAiOjE2ODE5MjI2MDh9.jRVLCm1398-4gq5n8JM6OKJ5QOXxqIB_vhHSD6-f-YY' -H 'X-Schemathesis-TestCaseId: 1552e118a8b9450a84dc5b19b4a2ad55' -d '{"password": "\ud882\udd81\u00001\ud804\udc01\ud982\ude01\u009f\ud982\udd00\ud803\udd80", "username": "\u001d\u0089", "create_at": "0404-08-03T00:12:00.065792-01:00", "": [], "\ud802\udf00": [0.0, null, {}], "nick_name": "\u00a6"}' https://next.kemongmo.com/v1/users/
+
+Or add this option to your command line parameters: --hypothesis-seed=316769117862052102048116849210082392684
+=================================== SUMMARY ====================================
+
+Performed checks:
+    not_a_server_error                              2800 / 3326 passed          FAILED 
+    status_code_conformance                         1567 / 3326 passed          FAILED 
+    content_type_conformance                        3326 / 3326 passed          PASSED 
+    response_headers_conformance                    3326 / 3326 passed          PASSED 
+    response_schema_conformance                     3107 / 3326 passed          FAILED 
+
+Network log: all.yaml
+
+Compressed report size: 3,345 KB
+Uploading reports to https://api.schemathesis.io/ ...
+Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠹Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠸Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠼Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠴Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠦Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠧Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠇Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠏Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠋Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠙Upload: ⠹Upload: FAILED
+
+Your report is too large. The limit is 250 KB, but your report is 3345 KB. Upgrade to the pro subscription to upload without size limits: https://app.schemathesis.io/orders/new/
+
+======================= 14 passed, 18 failed in 312.13s ========================
